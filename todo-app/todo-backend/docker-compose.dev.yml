@@ -15,6 +15,7 @@ services:
   redis:
     image: redis
     ports:
-      - 8080:6379
+      - 6379:6379
+    command: ['redis-server', '--appendonly', 'yes'] # Overwrite CMD
     volumes:
-      - ./redis_data:/data/cache
+       - ./redis_data:/data    
