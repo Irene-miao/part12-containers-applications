@@ -8,9 +8,11 @@ COPY . .
 
 RUN npm ci 
 
+RUN CI=true npm test
+
 RUN npm run build
 
-RUN CI=true npm test
+
 
 
 #New stage

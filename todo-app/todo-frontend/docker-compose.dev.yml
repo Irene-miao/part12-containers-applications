@@ -1,0 +1,12 @@
+services:
+  app:
+    image: hello-front-dev
+    build:
+      context: .  #build context
+      dockerfile: dev.Dockerfile   #which dockerfile to read
+    volumes:
+      - ./:/usr/src/app  # same location as docker-compose.yml
+    ports:
+      - 3000:3000
+    container_name:  hello-front-dev    #name the container
+  
