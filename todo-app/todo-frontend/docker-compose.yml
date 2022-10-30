@@ -1,0 +1,13 @@
+version :  "3.9"
+
+services:
+  app:
+    image: hello-front-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:80
+    container_name: hello-front-prod
